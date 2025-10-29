@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 export function Hero() {
@@ -21,8 +22,8 @@ export function Hero() {
             Connect with high-converting campaigns, real-time tracking, and fast crypto payouts.
           </p>
           <div className="mt-8 flex items-center justify-center gap-3">
-            <Button size="lg" className="bg-[--primary-hex] hover:opacity-90">
-              Start earning now
+            <Button asChild size="lg" className="bg-[--primary-hex] text-white hover:bg-[--primary-hover-hex] transition-colors">
+              <Link href="/auth/login">Start earning now</Link>
             </Button>
             <Button size="lg" variant="outline">
               Learn more

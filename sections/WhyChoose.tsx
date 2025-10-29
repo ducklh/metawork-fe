@@ -44,9 +44,11 @@ export function WhyChoose() {
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.45, delay: i * 0.06 }}
             >
-              <Card className="h-full shadow-sm transition-transform hover:-translate-y-1 hover:shadow-md">
+              <Card className="h-full border-0 bg-gradient-to-br from-white to-zinc-50 shadow-sm ring-1 ring-zinc-100 transition-transform hover:-translate-y-1 hover:shadow-md">
                 <CardContent className="p-6">
-                  <f.icon className="h-6 w-6 text-[--primary-hex]" />
+                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#6A4DF4] to-[#4FC3F7] text-white">
+                    <f.icon className="h-5 w-5" />
+                  </div>
                   <h3 className="mt-4 text-lg font-semibold">{f.title}</h3>
                   <p className="mt-2 text-sm text-zinc-600">{f.desc}</p>
                 </CardContent>

@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
@@ -15,6 +17,7 @@ const navItems = [
 
 export function NavBar() {
   const pathname = usePathname();
+  const [open, setOpen] = useState(false);
 
   return (
     <motion.header
@@ -35,24 +38,68 @@ export function NavBar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`text-sm transition-colors ${
-                  active ? "text-zinc-900" : "text-zinc-500 hover:text-zinc-900"
-                }`}
+                className={`text-sm transition-colors ${active
+                  ? "font-semibold text-[--primary-hex]"
+                  : "text-zinc-500 hover:text-zinc-900"
+                  }`}
               >
                 {item.label}
               </Link>
             );
           })}
         </nav>
-        <div className="flex items-center gap-3">
-          <Button asChild size="sm" variant="outline">
-            <Link href="#cta">Log in</Link>
-          </Button>
-          <Button asChild size="sm" className="bg-[--primary-hex] hover:opacity-90">
-            <Link href="#cta">Start earning</Link>
+        <div className="hidden items-center gap-3 md:flex">
+          <Button
+            asChild
+            size="sm"
+            className="bg-primary text-primary-foreground hover:bg-[--primary-hover-hex] transition-colors"
+          >
+            <Link href="/auth/login">Start earning</Link>
           </Button>
         </div>
+        <button
+          aria-label="Open menu"
+          className="inline-flex items-center justify-center rounded md:hidden"
+          onClick={() => setOpen((v) => !v)}
+        >
+          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
       </div>
+      {/* Mobile menu */}
+      {open && (
+        <div className="md:hidden">
+          <div className="border-b bg-white">
+            <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6">
+              <div className="flex flex-col gap-3">
+                {navItems.map((item) => {
+                  const active = pathname === item.href;
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className={`${active
+                        ? "font-semibold text-[--primary-hex]"
+                        : "text-zinc-600 hover:text-zinc-900"
+                        }`}
+                      onClick={() => setOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  );
+                })}
+                <Button
+                  asChild
+                  size="sm"
+                  className="mt-2 w-full bg-primary text-primary-foreground hover:bg-[--primary-hover-hex]"
+                  onClick={() => setOpen(false)}
+                >
+                  <Link href="/auth/login">Start earning</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </motion.header>
   );
 }
