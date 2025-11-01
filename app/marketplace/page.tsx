@@ -30,8 +30,8 @@ export default function MarketplacePage() {
               onClick={() => setActive(f)}
               className={
                 active === f
-                  ? "bg-primary text-primary-foreground hover:bg-[--primary-hover-hex]"
-                  : "border-[--primary-hex] text-[--primary-hex]"
+                  ? "bg-[#DC2626] text-white hover:bg-[#B91C1C]"
+                  : "border-[#DC2626] text-[#DC2626]"
               }
             >
               {f}
@@ -57,7 +57,7 @@ export default function MarketplacePage() {
                 </div>
                 <p className="mt-4 line-clamp-2 text-sm text-zinc-600">{c.description}</p>
                 <div className="mt-6">
-                  <Button className="bg-primary text-primary-foreground hover:bg-[--primary-hover-hex]">Join Now</Button>
+                  <Button className="bg-[#DC2626] text-white hover:bg-[#B91C1C]">Join Now</Button>
                 </div>
               </CardContent>
             </Card>

@@ -42,7 +42,7 @@ export function HowItWorks() {
               transition={{ duration: 0.45, delay: i * 0.06 }}
               className={`rounded-2xl border bg-gradient-to-br ${s.color} p-6 shadow-sm`}
             >
-              <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[--primary-hex] text-white">
+              <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-black text-white">
                 <s.icon className="h-5 w-5" />
               </div>
               <h3 className="mt-4 text-lg font-semibold">{s.title}</h3>

@@ -22,11 +22,11 @@ export function Hero() {
             Connect with high-converting campaigns, real-time tracking, and fast crypto payouts.
           </p>
           <div className="mt-8 flex items-center justify-center gap-3">
-            <Button asChild size="lg" className="bg-[--primary-hex] text-white hover:bg-[--primary-hover-hex] transition-colors">
+            <Button asChild size="lg" className="bg-[#DC2626] text-white hover:bg-[#B91C1C] transition-colors shadow-md hover:shadow-lg">
               <Link href="/auth/login">Start earning now</Link>
             </Button>
-            <Button size="lg" variant="outline">
-              Learn more
+            <Button asChild size="lg" variant="outline">
+              <Link href="/about-us">Learn more</Link>
             </Button>
           </div>
         </motion.div>

@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 
 const navItems = [
   { href: "/", label: "Home" },
+  { href: "/about-us", label: "About Us" },
   { href: "/mission", label: "Mission" },
   { href: "/marketplace", label: "Marketplace" },
   { href: "/api-connect", label: "API Connect" },

@@ -12,7 +12,7 @@ type AuthCardProps = {
 
 export function AuthCard({ title, subtitle, children }: AuthCardProps) {
   return (
-    <div className="flex h-screen items-center justify-center bg-gradient-to-br from-[#6A4DF4] to-[#4FC3F7] px-4">
+    <div className="flex h-screen items-center justify-center bg-gradient-to-br from-[#DC2626] to-black px-4">
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}

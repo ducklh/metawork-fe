@@ -71,10 +71,10 @@ export default function RegisterAffiliatePage() {
         </div>
         {errors.terms && <p className="-mt-2 text-xs text-red-600">{errors.terms.message as string}</p>}
 
-        <Button type="submit" className="w-full bg-[--primary-hex] hover:opacity-90">Create Account</Button>
+        <Button type="submit" className="w-full bg-[#DC2626] text-white hover:bg-[#B91C1C]">Create Account</Button>
 
         <p className="text-center text-sm text-zinc-600">
-          Already have an account? <Link href="/auth/login" className="text-[--primary-hex] hover:underline">Login here</Link>
+          Already have an account? <Link href="/auth/login" className="text-red-600 hover:text-red-700 hover:underline">Login here</Link>
         </p>
       </form>
     </AuthCard>

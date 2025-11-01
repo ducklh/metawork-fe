@@ -14,28 +14,28 @@ export default function MissionPage() {
             <h2 className="text-xl font-semibold">For Affiliates</h2>
             <ul className="mt-4 grid gap-4 sm:grid-cols-2">
               <li className="flex items-start gap-3">
-                <BarChart3 className="mt-1 h-5 w-5 text-[--primary-hex]" />
+                <BarChart3 className="mt-1 h-5 w-5 text-[#DC2626]" />
                 <div>
                   <p className="font-medium">Real-time data tracking</p>
                   <p className="text-sm text-zinc-600">Live analytics for clicks, conversions, and revenue.</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <Coins className="mt-1 h-5 w-5 text-[--primary-hex]" />
+                <Coins className="mt-1 h-5 w-5 text-[#DC2626]" />
                 <div>
                   <p className="font-medium">Crypto payments</p>
                   <p className="text-sm text-zinc-600">Fast payouts in popular assets and stablecoins.</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <Globe className="mt-1 h-5 w-5 text-[--primary-hex]" />
+                <Globe className="mt-1 h-5 w-5 text-[#DC2626]" />
                 <div>
                   <p className="font-medium">Diverse campaigns</p>
                   <p className="text-sm text-zinc-600">Crypto, FX, and fintech categories with top-tier offers.</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <ShieldCheck className="mt-1 h-5 w-5 text-[--primary-hex]" />
+                <ShieldCheck className="mt-1 h-5 w-5 text-[#DC2626]" />
                 <div>
                   <p className="font-medium">Anti-fraud protection</p>
                   <p className="text-sm text-zinc-600">Keep your earnings safe with proactive monitoring.</p>
@@ -48,28 +48,28 @@ export default function MissionPage() {
             <h2 className="text-xl font-semibold">For Advertisers</h2>
             <ul className="mt-4 grid gap-4 sm:grid-cols-2">
               <li className="flex items-start gap-3">
-                <ShieldCheck className="mt-1 h-5 w-5 text-[--primary-hex]" />
+                <ShieldCheck className="mt-1 h-5 w-5 text-[#DC2626]" />
                 <div>
                   <p className="font-medium">Trusted platform</p>
                   <p className="text-sm text-zinc-600">Rigorous screening and quality assurance.</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <Globe className="mt-1 h-5 w-5 text-[--primary-hex]" />
+                <Globe className="mt-1 h-5 w-5 text-[#DC2626]" />
                 <div>
                   <p className="font-medium">Global reach</p>
                   <p className="text-sm text-zinc-600">Tap into a worldwide network of affiliates.</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <BarChart3 className="mt-1 h-5 w-5 text-[--primary-hex]" />
+                <BarChart3 className="mt-1 h-5 w-5 text-[#DC2626]" />
                 <div>
                   <p className="font-medium">Data transparency</p>
                   <p className="text-sm text-zinc-600">Granular metrics with clear attribution.</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <Coins className="mt-1 h-5 w-5 text-[--primary-hex]" />
+                <Coins className="mt-1 h-5 w-5 text-[#DC2626]" />
                 <div>
                   <p className="font-medium">Flexible payouts</p>
                   <p className="text-sm text-zinc-600">Pay-as-you-go with streamlined reconciliation.</p>

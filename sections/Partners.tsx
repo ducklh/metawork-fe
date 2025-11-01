@@ -4,12 +4,12 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const partnerLogos = [
-  "/logos/crypto1.png",
-  "/logos/crypto2.png",
-  "/logos/crypto3.png",
-  "/logos/crypto4.png",
-  "/logos/forex1.png",
-  "/logos/forex2.png",
+  "/partner/binance.png",
+  "/partner/bingx.webp",
+  "/partner/bybit.png",
+  "/partner/google.png",
+  "/partner/Lbank.png",
+  "/partner/mexc.png",
 ];
 
 export function Partners() {
@@ -29,7 +29,7 @@ export function Partners() {
               transition={{ duration: 0.35, delay: i * 0.04 }}
               className="flex items-center justify-center"
             >
-              <div className="relative h-8 w-24 opacity-80 grayscale transition hover:opacity-100 hover:grayscale-0">
+              <div className="relative h-8 w-24 transition hover:opacity-100 hover:grayscale-0">
                 <Image src={src} alt="Partner" fill className="object-contain" />
               </div>
             </motion.div>

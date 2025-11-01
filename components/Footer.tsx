@@ -7,7 +7,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6">
         <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
           <div className="flex items-center gap-2 font-semibold">
-            <span className="inline-block h-6 w-6 rounded bg-[--primary-hex]"></span>
+            <span className="inline-block h-6 w-6 rounded bg-[#DC2626]"></span>
             <span>Metawork</span>
           </div>
           <div className="flex items-center gap-5 text-sm text-zinc-600">

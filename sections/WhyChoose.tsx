@@ -46,7 +46,7 @@ export function WhyChoose() {
             >
               <Card className="h-full border-0 bg-gradient-to-br from-white to-zinc-50 shadow-sm ring-1 ring-zinc-100 transition-transform hover:-translate-y-1 hover:shadow-md">
                 <CardContent className="p-6">
-                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#6A4DF4] to-[#4FC3F7] text-white">
+                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#DC2626] to-black text-white">
                     <f.icon className="h-5 w-5" />
                   </div>
                   <h3 className="mt-4 text-lg font-semibold">{f.title}</h3>

@@ -52,7 +52,7 @@ export default function LoginPage() {
                   <label className="text-sm font-medium">Password</label>
                   <Input type="password" placeholder="••••••••" />
                 </div>
-                <Button className="w-full bg-[--primary-hex] text-white hover:bg-[--primary-hover-hex]">Sign in</Button>
+                <Button className="w-full bg-[#DC2626] text-white hover:bg-[#B91C1C]">Sign in</Button>
               </div>
 
               <div className=" space-y-3">
@@ -62,9 +62,9 @@ export default function LoginPage() {
                   Continue with Google
                 </Button>
                 <p className="text-center text-sm text-zinc-600">
-                  <Link href="/auth/register-affiliate" className="font-semibold text-indigo-600 hover:text-indigo-700 hover:underline">Register as Affiliate</Link>
+                  <Link href="/auth/register-affiliate" className="font-semibold text-red-600 hover:text-red-700 hover:underline">Register as Affiliate</Link>
                   {"  or  "}
-                  <Link href="/auth/register-advertiser" className="font-semibold text-indigo-600 hover:text-indigo-700 hover:underline">Register as Advertiser</Link>
+                  <Link href="/auth/register-advertiser" className="font-semibold text-red-600 hover:text-red-700 hover:underline">Register as Advertiser</Link>
                 </p>
               </div>
 
