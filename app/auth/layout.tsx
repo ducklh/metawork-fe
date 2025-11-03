@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sign in — Metawork",
+  title: "Sign in — K Network",
 };
 
 export default function AuthLayout({

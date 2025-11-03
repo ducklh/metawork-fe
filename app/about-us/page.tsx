@@ -52,7 +52,7 @@ const visionMissionData = [
 const teamMembers = [
   {
     name: "Nguyễn Hữu Nghĩa",
-    position: "CEO & Co-founder",
+    position: "CEO",
     description: "Serial entrepreneur with 10+ years in affiliate marketing and fintech.",
     image: "/member/nguyen-huu-nghia.png",
     social: {
@@ -61,30 +61,30 @@ const teamMembers = [
     },
   },
   {
-    name: "Sarah Kim",
-    position: "CTO & Co-founder",
+    name: "Hung",
+    position: "Co-founder",
     description: "Full-stack engineer passionate about building scalable, secure platforms.",
-    image: "/logos/duck.jpeg",
+    image: "/member/hung.png",
     social: {
       linkedin: "https://linkedin.com",
       twitter: "https://twitter.com",
     },
   },
   {
-    name: "Michael Nguyen",
+    name: "Trang",
     position: "Head of Partnerships",
     description: "Expert in forging strategic alliances and driving business growth.",
-    image: "/logos/duck.jpeg",
+    image: "/member/trang.png",
     social: {
       linkedin: "https://linkedin.com",
       twitter: "https://twitter.com",
     },
   },
   {
-    name: "Emily Rodriguez",
+    name: "Nhi",
     position: "Head of Product",
     description: "User-centric designer turning complex problems into elegant solutions.",
-    image: "/logos/duck.jpeg",
+    image: "/member/nhi.png",
     social: {
       linkedin: "https://linkedin.com",
       twitter: "https://twitter.com",
@@ -152,7 +152,7 @@ export default function AboutUs() {
           >
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Who We Are</h1>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-600">
-              Metawork is a leading affiliate marketing platform that connects ambitious affiliates with high-performing
+              K Network is a leading affiliate marketing platform that connects ambitious affiliates with high-performing
               campaigns, enabling growth, transparency, and success in the digital economy.
             </p>
           </motion.div>
@@ -172,7 +172,7 @@ export default function AboutUs() {
             >
               <Image
                 src="/logos/duck.jpeg"
-                alt="Metawork team working together"
+                alt="K Network team working together"
                 fill
                 className="object-cover"
               />
@@ -186,16 +186,16 @@ export default function AboutUs() {
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Our Story</h2>
               <div className="mt-6 space-y-4 text-zinc-600">
                 <p>
-                  Metawork was born from a simple observation: affiliate marketing platforms were fragmented, opaque, and
+                  K Network was born from a simple observation: affiliate marketing platforms were fragmented, opaque, and
                   often didn&apos;t serve the needs of modern digital creators and advertisers. We set out to change that.
                 </p>
                 <p>
-                  Founded in 2023, we built Metawork with a vision to democratize affiliate marketing. Our founders,
+                  Founded in 2023, we built K Network with a vision to democratize affiliate marketing. Our founders,
                   who have decades of combined experience in fintech, marketing, and technology, recognized the need for
                   a platform that prioritizes transparency, fast payouts, and real-time insights.
                 </p>
                 <p>
-                  Today, Metawork serves thousands of affiliates and advertisers across the globe, processing millions in
+                  Today, K Network serves thousands of affiliates and advertisers across the globe, processing millions in
                   transaction volume while maintaining our core values of integrity, innovation, and partnership.
                 </p>
               </div>
@@ -247,7 +247,7 @@ export default function AboutUs() {
           >
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Meet Our Team</h2>
             <p className="mt-3 text-zinc-600">
-              The people behind Metawork are passionate builders, thinkers, and dreamers.
+              The people behind K Network are passionate builders, thinkers, and dreamers.
             </p>
           </motion.div>
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -409,10 +409,10 @@ export default function AboutUs() {
               </div>
               <h3 className="mt-4 font-semibold">Email</h3>
               <a
-                href="mailto:contact@metawork.network"
+                href="mailto:contact@K Network.network"
                 className="mt-2 block text-sm text-zinc-600 hover:text-red-700"
               >
-                contact@metawork.network
+                contact@K Network.network
               </a>
             </motion.div>
             <motion.div

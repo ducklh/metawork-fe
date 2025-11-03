@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -29,8 +30,15 @@ export function NavBar() {
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2 font-semibold">
-          <span className="inline-block h-6 w-6 rounded bg-[--primary-hex]"></span>
-          <span>Metawork</span>
+          <Image
+            src="/logos/k-logo.png"
+            alt="K Logo"
+            width={24}
+            height={24}
+            className="h-6 w-auto"
+            priority
+          />
+          <span>Network</span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {navItems.map((item) => {

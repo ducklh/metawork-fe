@@ -24,8 +24,8 @@ export default function LoginPage() {
         <div className="relative hidden items-center justify-center md:flex">
           <div className="relative w-4/5 max-w-xl">
             <Image
-              src="/logos/logo-row-light.png"
-              alt="Metawork Logo"
+              src="/logos/logo.png"
+              alt="K Network Logo"
               width={600}
               height={400}
               className="mx-auto h-auto w-3/4 md:w-2/3"
@@ -38,7 +38,7 @@ export default function LoginPage() {
         <div className="flex h-full items-center justify-center p-4 md:p-10">
           <div className="w-full max-w-md rounded-2xl bg-white p-8 md:h-auto">
             <div className="text-center">
-              <h1 className="text-2xl font-bold tracking-tight text-zinc-900">Sign in to Metawork</h1>
+              <h1 className="text-2xl font-bold tracking-tight text-zinc-900">Sign in to K Network</h1>
             </div>
 
             <div className="mt-6">

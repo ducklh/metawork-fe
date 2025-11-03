@@ -15,7 +15,7 @@ export function FinalCTA() {
           transition={{ duration: 0.5 }}
           className="rounded-2xl border bg-zinc-50 px-8 py-14 text-center shadow-sm"
         >
-          <h3 className="text-2xl font-bold sm:text-3xl">Start earning with Metawork today</h3>
+          <h3 className="text-2xl font-bold sm:text-3xl">Start earning with K Network today</h3>
           <p className="mt-2 text-zinc-600">Join affiliates and advertisers growing with trusted performance marketing.</p>
           <div className="mt-6 flex items-center justify-center gap-3">
             <Button asChild size="lg" variant="outline">
