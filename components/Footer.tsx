@@ -20,7 +20,7 @@ export function Footer() {
             <Link href="/docs" className="flex items-center gap-2 hover:text-zinc-900">
               <BookOpen size={18} /> Docs
             </Link>
-            <Link href="mailto:hello@K Network.network" className="flex items-center gap-2 hover:text-zinc-900">
+            <Link href="mailto:k.network.channel.crypto@gmail.com" className="flex items-center gap-2 hover:text-zinc-900">
               <Mail size={18} /> Email
             </Link>
           </div>

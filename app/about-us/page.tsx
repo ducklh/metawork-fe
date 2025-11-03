@@ -168,15 +168,18 @@ export default function AboutUs() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.5 }}
-              className="relative h-64 w-full overflow-hidden rounded-2xl bg-gradient-to-br from-red-100 sm:h-80 lg:h-96"
+              className="relative h-64 w-full overflow-hidden rounded-2xl bg-white sm:h-80 lg:h-96 flex items-center justify-center"
             >
               <Image
-                src="/logos/duck.jpeg"
+                src="/logos/logo.png"
                 alt="K Network team working together"
-                fill
-                className="object-cover"
+                width={450}
+                height={450}
+                className="object-contain"
               />
             </motion.div>
+
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -409,10 +412,10 @@ export default function AboutUs() {
               </div>
               <h3 className="mt-4 font-semibold">Email</h3>
               <a
-                href="mailto:contact@K Network.network"
+                href="mailto:k.network.channel.crypto@gmail.com"
                 className="mt-2 block text-sm text-zinc-600 hover:text-red-700"
               >
-                contact@K Network.network
+                k.network.channel.crypto@gmail.com
               </a>
             </motion.div>
             <motion.div
