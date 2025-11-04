@@ -111,25 +111,9 @@ export default function APIConnectPage() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
         <div className="mb-8">
           <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Crypto Market</h1>
-          <p className="mt-3 max-w-2xl text-gray-400">
-            Real-time cryptocurrency market data powered by CoinGecko API
-          </p>
         </div>
 
         <Card className="border-gray-800 bg-gray-900/50 backdrop-blur">
-          <CardHeader className="border-b border-gray-800">
-            <div className="flex items-center justify-between">
-              <CardTitle className="text-white">Top 50 Cryptocurrencies</CardTitle>
-              <button
-                onClick={fetchData}
-                disabled={loading}
-                className="inline-flex items-center gap-2 rounded-md bg-[#DC2626] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[#B91C1C] disabled:opacity-50"
-              >
-                <RefreshCw className={`h-4 w-4 ${loading ? "animate-spin" : ""}`} />
-                Refresh
-              </button>
-            </div>
-          </CardHeader>
           <CardContent className="p-0">
             {loading && (
               <div className="flex items-center justify-center py-20">
