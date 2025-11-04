@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import { NavBar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 export function SiteChrome({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -13,6 +14,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
       <>
         <NavBar />
         <main className="pt-16 min-h-[calc(100vh-64px)]">{children}</main>
+        <ScrollToTop />
       </>
     );
   }
@@ -22,6 +24,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
       <NavBar />
       <main className="pt-16 min-h-[calc(100vh-64px)]">{children}</main>
       <Footer />
+      <ScrollToTop />
     </>
   );
 }
