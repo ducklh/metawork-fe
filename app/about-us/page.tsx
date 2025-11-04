@@ -61,7 +61,7 @@ const teamMembers = [
     },
   },
   {
-    name: "Hung",
+    name: "ATHAN",
     position: "Co-founder",
     description: "Full-stack engineer passionate about building scalable, secure platforms.",
     image: "/member/hung.png",

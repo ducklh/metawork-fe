@@ -38,7 +38,7 @@ export function NavBar() {
             className="h-6 w-auto"
             priority
           />
-          <span>Network</span>
+          <span>NETWORK</span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {navItems.map((item) => {
