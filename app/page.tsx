@@ -1,10 +1,9 @@
 import { Hero } from "@/sections/Hero";
 import { Stats } from "@/sections/Stats";
-import { WhoWeHelp } from "@/sections/WhoWeHelp";
-import { WhyChoose } from "@/sections/WhyChoose";
-import { CoreSolutions } from "@/sections/CoreSolutions";
-import { SuccessStories } from "@/sections/SuccessStories";
+import { WhyKNetwork } from "@/sections/WhyKNetwork";
+import { ArchitectureOverview } from "@/sections/ArchitectureOverview";
 import { Partners } from "@/sections/Partners";
+import { Testimonials } from "@/sections/Testimonials";
 import { FinalCTA } from "@/sections/FinalCTA";
 
 export default function Home() {
@@ -12,11 +11,10 @@ export default function Home() {
     <>
       <Hero />
       <Stats />
-      <WhoWeHelp />
-      <WhyChoose />
-      <CoreSolutions />
-      <SuccessStories />
+      <WhyKNetwork />
+      <ArchitectureOverview />
       <Partners />
+      <Testimonials />
       <FinalCTA />
     </>
   );

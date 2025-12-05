@@ -1,83 +1,70 @@
 "use client";
 
-import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { Star, Quote } from "lucide-react";
+import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Alex Chen",
-    role: "Affiliate Marketer",
-    content: "K Network has transformed how I monetize my traffic. The real-time tracking and fast payouts make it my go-to platform. I've doubled my earnings in just 3 months!",
-    rating: 5,
-    avatar: "AC",
+    quote: "K-Network's infrastructure has been instrumental in scaling our trading operations. The smart routing engine consistently delivers optimal execution across all our asset classes.",
+    author: "Sarah Chen",
+    role: "CTO",
+    company: "Global Exchange Platform",
   },
   {
-    name: "Sarah Martinez",
-    role: "Content Creator",
-    content: "The marketplace is incredibly diverse with high-quality campaigns. The support team is responsive and the dashboard is intuitive. Highly recommend!",
-    rating: 5,
-    avatar: "SM",
+    quote: "The multi-asset liquidity access and institutional-grade security give us the confidence to handle enterprise-level trading volumes. Uptime has been exceptional.",
+    author: "Michael Rodriguez",
+    role: "Head of Trading",
+    company: "International Brokerage",
   },
   {
-    name: "Michael Johnson",
-    role: "Advertiser",
-    content: "As an advertiser, I've seen exceptional ROI working with K Network affiliates. The fraud prevention and quality traffic have been game-changers for our campaigns.",
-    rating: 5,
-    avatar: "MJ",
-  },
-  {
-    name: "Emma Wilson",
-    role: "Digital Marketer",
-    content: "The API integration made it seamless to connect our systems. Crypto payouts are fast and reliable. This platform has streamlined our entire affiliate program.",
-    rating: 5,
-    avatar: "EW",
+    quote: "Integration was seamless, and the API documentation is comprehensive. K-Network's team provided excellent support throughout our implementation process.",
+    author: "David Kim",
+    role: "Engineering Lead",
+    company: "Fintech Startup",
   },
 ];
 
 export function Testimonials() {
   return (
-    <section className="bg-gradient-to-b from-zinc-50 to-white">
-      <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
+    <section className="bg-white">
+      <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:py-32">
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.5 }}
-          className="mx-auto max-w-2xl text-center"
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+          className="mx-auto max-w-2xl text-center mb-16"
         >
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">What Our Users Say</h2>
-          <p className="mt-3 text-zinc-600">Real feedback from affiliates and advertisers using K Network.</p>
+          <h2 className="text-3xl font-semibold tracking-tight text-zinc-900 sm:text-4xl">
+            Trusted by Industry Leaders
+          </h2>
+          <p className="mt-4 text-lg text-zinc-600">
+            See what our partners say about working with K-Network.
+          </p>
         </motion.div>
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((testimonial, i) => (
             <motion.div
-              key={testimonial.name}
-              initial={{ opacity: 0, y: 14 }}
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.4 }}
-              transition={{ duration: 0.45, delay: i * 0.08 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="relative bg-zinc-50 rounded-lg p-8 border border-zinc-200"
             >
-              <Card className="h-full border-0 bg-white shadow-sm ring-1 ring-zinc-100 transition-all hover:shadow-md hover:ring-zinc-200">
-                <CardContent className="p-6">
-                  <div className="mb-4 flex items-center gap-1">
-                    {Array.from({ length: testimonial.rating }).map((_, idx) => (
-                      <Star key={idx} className="h-4 w-4 fill-amber-400 text-amber-400" />
-                    ))}
-                  </div>
-                  <Quote className="mb-3 h-6 w-6 text-zinc-300" />
-                  <p className="mb-4 text-sm text-zinc-700">{testimonial.content}</p>
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#DC2626] to-black text-sm font-semibold text-white">
-                      {testimonial.avatar}
-                    </div>
-                    <div>
-                      <div className="text-sm font-semibold">{testimonial.name}</div>
-                      <div className="text-xs text-zinc-500">{testimonial.role}</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <Quote className="h-8 w-8 text-zinc-300 mb-4" />
+              <p className="text-base text-zinc-700 leading-relaxed mb-6">
+                {testimonial.quote}
+              </p>
+              <div className="border-t border-zinc-200 pt-6">
+                <div className="font-semibold text-zinc-900">
+                  {testimonial.author}
+                </div>
+                <div className="text-sm text-zinc-600 mt-1">
+                  {testimonial.role}, {testimonial.company}
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>
@@ -85,4 +72,3 @@ export function Testimonials() {
     </section>
   );
 }
-
