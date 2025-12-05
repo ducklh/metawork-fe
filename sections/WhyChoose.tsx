@@ -1,29 +1,29 @@
 "use client";
 
 import { Card, CardContent } from "@/components/ui/card";
-import { ShieldCheck, Rocket, Clock, LineChart } from "lucide-react";
+import { Shield, Target, FileCheck, BarChart3 } from "lucide-react";
 import { motion } from "framer-motion";
 
 const features = [
   {
-    icon: Rocket,
-    title: "High-Performance Campaigns",
-    desc: "Access vetted offers with competitive payouts and strong conversion rates.",
+    icon: Shield,
+    title: "Brand Protection Experts",
+    desc: "Shield your brand from competitor hijacking with our proven Google Ads defense system.",
   },
   {
-    icon: LineChart,
-    title: "Real-time Analytics",
-    desc: "Track clicks, conversions, and revenue live with transparent reporting.",
+    icon: Target,
+    title: "High-Intent Customer Acquisition",
+    desc: "Delivering real users with strong trading behavior across consistent GEOs.",
   },
   {
-    icon: Clock,
-    title: "Fast Payouts",
-    desc: "Get paid quickly in crypto or stablecoins with minimal friction.",
+    icon: FileCheck,
+    title: "Compliance-First Approach",
+    desc: "Tailored solutions for regulated environments to ensure long-term stability.",
   },
   {
-    icon: ShieldCheck,
-    title: "Trusted & Secure",
-    desc: "Robust fraud prevention, compliant flows, and advertiser-grade infrastructure.",
+    icon: BarChart3,
+    title: "Transparent Tracking & Reporting",
+    desc: "Real-time data, clear attribution, no hidden metrics.",
   },
 ];
 
@@ -32,8 +32,8 @@ export function WhyChoose() {
     <section>
       <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Why Choose K Network?</h2>
-          <p className="mt-3 text-zinc-600">Built for affiliates and advertisers to grow together.</p>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Why Choose K-NETWORK</h2>
+          <p className="mt-3 text-zinc-600">Built for financial brands and partners who demand excellence.</p>
         </div>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((f, i) => (

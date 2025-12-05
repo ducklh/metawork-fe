@@ -3,23 +3,49 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/about-us", label: "About Us" },
-  { href: "/mission", label: "Mission" },
+  {
+    label: "Solutions",
+    submenu: [
+      { href: "/solutions/crypto-forex", label: "For Crypto & Forex Brands" },
+      { href: "/solutions/individual-partners", label: "For Individual Partners" },
+    ],
+  },
   { href: "/marketplace", label: "Marketplace" },
   { href: "/api-connect", label: "API Connect" },
   { href: "/docs", label: "Docs" },
+  { href: "/partner-with-us", label: "Partner With Us" },
 ];
 
 export function NavBar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setSolutionsOpen(false);
+      }
+    };
+
+    if (solutionsOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [solutionsOpen]);
 
   return (
     <motion.header
@@ -42,6 +68,45 @@ export function NavBar() {
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {navItems.map((item) => {
+            if ("submenu" in item) {
+              return (
+                <div key={item.label} ref={dropdownRef} className="relative">
+                  <button
+                    onClick={() => setSolutionsOpen(!solutionsOpen)}
+                    className="flex items-center gap-1 text-sm text-zinc-500 transition-colors hover:text-zinc-900"
+                  >
+                    {item.label}
+                    <ChevronDown
+                      className={`h-4 w-4 transition-transform ${solutionsOpen ? "rotate-180" : ""}`}
+                    />
+                  </button>
+                  <AnimatePresence>
+                    {solutionsOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.2 }}
+                        className="absolute left-0 top-full mt-2 w-64 rounded-lg border bg-white shadow-lg"
+                      >
+                        <div className="py-2">
+                          {item.submenu.map((subItem) => (
+                            <Link
+                              key={subItem.href}
+                              href={subItem.href}
+                              className="block px-4 py-2 text-sm text-zinc-700 transition-colors hover:bg-zinc-50 hover:text-zinc-900"
+                              onClick={() => setSolutionsOpen(false)}
+                            >
+                              {subItem.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              );
+            }
             const active = pathname === item.href;
             return (
               <Link
@@ -61,9 +126,10 @@ export function NavBar() {
           <Button
             asChild
             size="sm"
-            className="bg-primary text-primary-foreground hover:bg-[--primary-hover-hex] transition-colors"
+            variant="outline"
+            className="border-zinc-300 text-zinc-700 hover:bg-zinc-50 transition-colors"
           >
-            <Link href="/auth/login">Start earning</Link>
+            <Link href="/auth/login">Log In</Link>
           </Button>
         </div>
         <button
@@ -81,6 +147,48 @@ export function NavBar() {
             <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6">
               <div className="flex flex-col gap-3">
                 {navItems.map((item) => {
+                  if ("submenu" in item) {
+                    return (
+                      <div key={item.label}>
+                        <button
+                          onClick={() => setMobileSolutionsOpen(!mobileSolutionsOpen)}
+                          className="flex w-full items-center justify-between text-zinc-600 hover:text-zinc-900"
+                        >
+                          {item.label}
+                          <ChevronDown
+                            className={`h-4 w-4 transition-transform ${mobileSolutionsOpen ? "rotate-180" : ""}`}
+                          />
+                        </button>
+                        <AnimatePresence>
+                          {mobileSolutionsOpen && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: "auto", opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.2 }}
+                              className="overflow-hidden"
+                            >
+                              <div className="ml-4 mt-2 flex flex-col gap-2 border-l-2 border-zinc-200 pl-4">
+                                {item.submenu.map((subItem) => (
+                                  <Link
+                                    key={subItem.href}
+                                    href={subItem.href}
+                                    className="text-sm text-zinc-600 hover:text-zinc-900"
+                                    onClick={() => {
+                                      setMobileSolutionsOpen(false);
+                                      setOpen(false);
+                                    }}
+                                  >
+                                    {subItem.label}
+                                  </Link>
+                                ))}
+                              </div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    );
+                  }
                   const active = pathname === item.href;
                   return (
                     <Link
@@ -99,10 +207,11 @@ export function NavBar() {
                 <Button
                   asChild
                   size="sm"
-                  className="mt-2 w-full bg-primary text-primary-foreground hover:bg-[--primary-hover-hex]"
+                  variant="outline"
+                  className="mt-2 w-full border-zinc-300 text-zinc-700 hover:bg-zinc-50"
                   onClick={() => setOpen(false)}
                 >
-                  <Link href="/auth/login">Start earning</Link>
+                  <Link href="/auth/login">Log In</Link>
                 </Button>
               </div>
             </div>

@@ -6,31 +6,31 @@ import { TrendingUp, Users, DollarSign, Target } from "lucide-react";
 
 const stories = [
   {
-    title: "Crypto Content Creator Success",
-    description: "A YouTube creator specializing in crypto education increased monthly earnings by 300% using our platform.",
+    title: "Exchange Visibility Growth",
+    description: "Boosted brand search visibility to 97% dominance in 7 days with targeted Google Ads defense.",
     metrics: [
-      { label: "Monthly Revenue", value: "$45K+", icon: DollarSign },
-      { label: "Conversion Rate", value: "12.5%", icon: Target },
+      { label: "Brand Visibility", value: "97%", icon: Target },
+      { label: "Time to Results", value: "7 Days", icon: TrendingUp },
     ],
     gradient: "from-violet-50 to-purple-50",
     borderColor: "border-violet-200",
   },
   {
-    title: "Trading Platform Partnership",
-    description: "A major crypto exchange scaled their affiliate program to 50,000+ active affiliates in 6 months.",
+    title: "New Forex Broker Launch",
+    description: "Generated over 12,000 high-intent clicks within 14 days across SEA & LATAM.",
     metrics: [
-      { label: "Active Affiliates", value: "50K+", icon: Users },
-      { label: "Growth", value: "400%", icon: TrendingUp },
+      { label: "High-Intent Clicks", value: "12K+", icon: DollarSign },
+      { label: "Launch Period", value: "14 Days", icon: TrendingUp },
     ],
     gradient: "from-blue-50 to-cyan-50",
     borderColor: "border-blue-200",
   },
   {
-    title: "Fintech Startup Growth",
-    description: "A fintech startup leveraged our network to acquire 10,000+ premium customers within 3 months.",
+    title: "Referral System Expansion",
+    description: "Helped a partner scale from 5,000 → 25,000 active users using mixed paid + organic funnels.",
     metrics: [
-      { label: "New Customers", value: "10K+", icon: Users },
-      { label: "ROI", value: "250%", icon: TrendingUp },
+      { label: "Active Users", value: "25K+", icon: Users },
+      { label: "Growth", value: "400%", icon: TrendingUp },
     ],
     gradient: "from-emerald-50 to-teal-50",
     borderColor: "border-emerald-200",
@@ -48,8 +48,8 @@ export function SuccessStories() {
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-2xl text-center"
         >
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Success Stories</h2>
-          <p className="mt-3 text-zinc-600">See how affiliates and advertisers are achieving remarkable results with K Network.</p>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Case Studies</h2>
+          <p className="mt-3 text-zinc-600">Real results from brands and partners working with K-NETWORK.</p>
         </motion.div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {stories.map((story, i) => (
