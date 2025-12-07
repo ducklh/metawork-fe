@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Building2, CheckCircle2, Send } from "lucide-react";
+import { Building2, CheckCircle2, Send, AlertCircle, FileText, MapPin } from "lucide-react";
 
 const geoOptions = [
   "Vietnam",
@@ -28,6 +28,9 @@ const goalOptions = [
 export default function PartnerWithUsPage() {
   const [formData, setFormData] = useState({
     companyName: "",
+    legalCompanyName: "",
+    registrationNumber: "",
+    businessCountry: "",
     website: "",
     contactPerson: "",
     email: "",
@@ -114,6 +117,29 @@ export default function PartnerWithUsPage() {
         </div>
       </section>
 
+      {/* Compliance Review Notice */}
+      <section className="bg-zinc-900 text-white">
+        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.4 }}
+            className="flex items-start gap-4 max-w-4xl mx-auto"
+          >
+            <div className="flex-shrink-0 mt-1">
+              <AlertCircle className="h-5 w-5 text-zinc-400" />
+            </div>
+            <div className="flex-1">
+              <h3 className="text-sm font-semibold text-white mb-2">Compliance Review Notice</h3>
+              <p className="text-sm text-zinc-400 leading-relaxed">
+                All partnership applications are subject to compliance review.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Form Section */}
       <section>
         <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
@@ -133,6 +159,57 @@ export default function PartnerWithUsPage() {
                     value={formData.companyName}
                     onChange={handleChange}
                     placeholder="Enter your company name"
+                    className="w-full"
+                  />
+                </div>
+
+                {/* Legal Company Name */}
+                <div>
+                  <label htmlFor="legalCompanyName" className="block text-sm font-semibold text-zinc-900 mb-2">
+                    Legal Company Name <span className="text-red-500">*</span>
+                  </label>
+                  <Input
+                    id="legalCompanyName"
+                    name="legalCompanyName"
+                    type="text"
+                    required
+                    value={formData.legalCompanyName}
+                    onChange={handleChange}
+                    placeholder="Enter legal entity name as registered"
+                    className="w-full"
+                  />
+                </div>
+
+                {/* Registration Number */}
+                <div>
+                  <label htmlFor="registrationNumber" className="block text-sm font-semibold text-zinc-900 mb-2">
+                    Registration Number <span className="text-red-500">*</span>
+                  </label>
+                  <Input
+                    id="registrationNumber"
+                    name="registrationNumber"
+                    type="text"
+                    required
+                    value={formData.registrationNumber}
+                    onChange={handleChange}
+                    placeholder="Enter business registration number"
+                    className="w-full"
+                  />
+                </div>
+
+                {/* Business Country */}
+                <div>
+                  <label htmlFor="businessCountry" className="block text-sm font-semibold text-zinc-900 mb-2">
+                    Business Country <span className="text-red-500">*</span>
+                  </label>
+                  <Input
+                    id="businessCountry"
+                    name="businessCountry"
+                    type="text"
+                    required
+                    value={formData.businessCountry}
+                    onChange={handleChange}
+                    placeholder="Enter country of business registration"
                     className="w-full"
                   />
                 </div>

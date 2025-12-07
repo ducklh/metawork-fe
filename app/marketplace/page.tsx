@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
-import { Globe, TrendingUp, Shield, MapPin, Building2, AlertCircle } from "lucide-react";
+import { Globe, TrendingUp, Shield, MapPin, Building2, AlertCircle, CheckCircle2, Info } from "lucide-react";
 import Link from "next/link";
 
 type Offer = {
@@ -286,6 +286,52 @@ export default function MarketplacePage() {
               <Button asChild size="lg" variant="outline" className="px-8">
                 <Link href="/solutions/individual-partners">Learn More</Link>
               </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Partner Program Verification */}
+      <section className="bg-zinc-900 text-white">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.4 }}
+            className="flex items-start gap-4 max-w-4xl mx-auto"
+          >
+            <div className="flex-shrink-0 mt-1">
+              <CheckCircle2 className="h-5 w-5 text-zinc-400" />
+            </div>
+            <div className="flex-1">
+              <h3 className="text-sm font-semibold text-white mb-2">Partner Program Verification</h3>
+              <p className="text-sm text-zinc-400 leading-relaxed">
+                All programs are reviewed based on transparency, reputation, and regulatory alignment.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Geographic Availability Notice */}
+      <section className="bg-zinc-950 text-white border-t border-zinc-800">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.4 }}
+            className="flex items-start gap-4 max-w-4xl mx-auto"
+          >
+            <div className="flex-shrink-0 mt-1">
+              <Info className="h-5 w-5 text-zinc-400" />
+            </div>
+            <div className="flex-1">
+              <h3 className="text-sm font-semibold text-white mb-2">Geographic Availability Notice</h3>
+              <p className="text-sm text-zinc-400 leading-relaxed">
+                Some programs may be restricted in certain jurisdictions.
+              </p>
             </div>
           </motion.div>
         </div>

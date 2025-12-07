@@ -15,6 +15,11 @@ import {
   Globe,
   FileText,
   ArrowRight,
+  Lock,
+  Key,
+  Network,
+  Activity,
+  Circle,
 } from "lucide-react";
 
 const features = [
@@ -303,6 +308,173 @@ export default function APIConnectPage() {
                 </Card>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Security Architecture Overview */}
+      <section className="bg-zinc-900 text-white">
+        <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:py-32">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.5 }}
+            className="mx-auto max-w-2xl text-center mb-16"
+          >
+            <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+              Security Architecture Overview
+            </h2>
+            <p className="mt-4 text-lg text-zinc-400">
+              Enterprise-grade security measures protecting all API communications and data.
+            </p>
+          </motion.div>
+          <div className="grid gap-6 sm:grid-cols-3">
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.45, delay: 0.1 }}
+            >
+              <Card className="h-full border border-zinc-800 bg-zinc-950">
+                <CardContent className="p-6">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 border border-zinc-700 mb-4">
+                    <Lock className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">TLS 1.3 encrypted transport</h3>
+                  <p className="text-sm text-zinc-400 leading-relaxed">
+                    All API communications are secured with TLS 1.3 encryption to ensure data privacy and integrity.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.45, delay: 0.2 }}
+            >
+              <Card className="h-full border border-zinc-800 bg-zinc-950">
+                <CardContent className="p-6">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 border border-zinc-700 mb-4">
+                    <Key className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Signed authentication</h3>
+                  <p className="text-sm text-zinc-400 leading-relaxed">
+                    API requests are authenticated using cryptographic signatures to prevent unauthorized access.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.45, delay: 0.3 }}
+            >
+              <Card className="h-full border border-zinc-800 bg-zinc-950">
+                <CardContent className="p-6">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 border border-zinc-700 mb-4">
+                    <Network className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Multi-region failover</h3>
+                  <p className="text-sm text-zinc-400 leading-relaxed">
+                    Automatic failover across multiple geographic regions ensures high availability and reliability.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* System Status */}
+      <section className="bg-zinc-950 text-white border-t border-zinc-800">
+        <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:py-32">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.5 }}
+            className="mx-auto max-w-2xl text-center mb-16"
+          >
+            <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+              System Status
+            </h2>
+            <p className="mt-4 text-lg text-zinc-400">
+              Real-time operational status and performance metrics.
+            </p>
+          </motion.div>
+          <div className="grid gap-6 sm:grid-cols-3">
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.45, delay: 0.1 }}
+            >
+              <Card className="h-full border border-zinc-800 bg-zinc-900">
+                <CardContent className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 border border-zinc-700">
+                      <Activity className="h-6 w-6 text-white" />
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Circle className="h-2 w-2 fill-emerald-500 text-emerald-500" />
+                      <span className="text-xs font-medium text-emerald-400">Live</span>
+                    </div>
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">API uptime</h3>
+                  <p className="text-2xl font-bold text-white mb-1">99.9%</p>
+                  <p className="text-sm text-zinc-400">Last 30 days</p>
+                </CardContent>
+              </Card>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.45, delay: 0.2 }}
+            >
+              <Card className="h-full border border-zinc-800 bg-zinc-900">
+                <CardContent className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 border border-zinc-700">
+                      <CheckCircle2 className="h-6 w-6 text-white" />
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Circle className="h-2 w-2 fill-emerald-500 text-emerald-500" />
+                      <span className="text-xs font-medium text-emerald-400">Operational</span>
+                    </div>
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Operational status</h3>
+                  <p className="text-base font-semibold text-white mb-1">All systems operational</p>
+                  <p className="text-sm text-zinc-400">No known issues</p>
+                </CardContent>
+              </Card>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.45, delay: 0.3 }}
+            >
+              <Card className="h-full border border-zinc-800 bg-zinc-900">
+                <CardContent className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 border border-zinc-700">
+                      <Globe className="h-6 w-6 text-white" />
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Circle className="h-2 w-2 fill-emerald-500 text-emerald-500 animate-pulse" />
+                      <span className="text-xs font-medium text-emerald-400">Monitoring</span>
+                    </div>
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Live monitoring indicator</h3>
+                  <p className="text-base font-semibold text-white mb-1">Active monitoring</p>
+                  <p className="text-sm text-zinc-400">24/7 system surveillance</p>
+                </CardContent>
+              </Card>
+            </motion.div>
           </div>
         </div>
       </section>

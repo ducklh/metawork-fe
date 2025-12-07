@@ -15,6 +15,10 @@ import {
   Users,
   MapPin,
   DollarSign,
+  FileCheck,
+  Eye,
+  Scale,
+  AlertCircle,
 } from "lucide-react";
 
 const solutions = [
@@ -264,6 +268,105 @@ export default function CryptoForexSolutions() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Compliance Framework */}
+      <section className="bg-zinc-900 text-white">
+        <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:py-32">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.5 }}
+            className="mx-auto max-w-2xl text-center mb-16"
+          >
+            <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+              Compliance Framework
+            </h2>
+            <p className="mt-4 text-lg text-zinc-400">
+              Built-in compliance measures to support regulatory requirements and risk management.
+            </p>
+          </motion.div>
+          <div className="grid gap-6 sm:grid-cols-3">
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.45, delay: 0.1 }}
+            >
+              <Card className="h-full border border-zinc-800 bg-zinc-950">
+                <CardContent className="p-6">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 border border-zinc-700 mb-4">
+                    <Eye className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Internal risk monitoring</h3>
+                  <p className="text-sm text-zinc-400 leading-relaxed">
+                    Continuous monitoring and assessment of operational risks with automated alerting systems.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.45, delay: 0.2 }}
+            >
+              <Card className="h-full border border-zinc-800 bg-zinc-950">
+                <CardContent className="p-6">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 border border-zinc-700 mb-4">
+                    <MapPin className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Jurisdiction-based controls</h3>
+                  <p className="text-sm text-zinc-400 leading-relaxed">
+                    Geographic restrictions and compliance controls tailored to specific regulatory jurisdictions.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.45, delay: 0.3 }}
+            >
+              <Card className="h-full border border-zinc-800 bg-zinc-950">
+                <CardContent className="p-6">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 border border-zinc-700 mb-4">
+                    <Scale className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Regulatory-aligned execution</h3>
+                  <p className="text-sm text-zinc-400 leading-relaxed">
+                    Operations designed to align with applicable financial regulations and industry standards.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Intended Use Notice */}
+      <section className="bg-zinc-950 text-white border-t border-zinc-800">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.4 }}
+            className="flex items-start gap-4 max-w-4xl mx-auto"
+          >
+            <div className="flex-shrink-0 mt-1">
+              <AlertCircle className="h-5 w-5 text-zinc-400" />
+            </div>
+            <div className="flex-1">
+              <h3 className="text-sm font-semibold text-white mb-2">Intended Use Notice</h3>
+              <p className="text-sm text-zinc-400 leading-relaxed">
+                This solution is designed for established trading platforms and is not intended for unlicensed entities.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 

@@ -15,6 +15,11 @@ import {
   Link2,
   Zap,
   Award,
+  AlertTriangle,
+  FileText,
+  Ban,
+  XCircle,
+  Shield,
 } from "lucide-react";
 
 const solutions = [
@@ -328,6 +333,105 @@ export default function IndividualPartnersSolutions() {
                 <p className="mt-3 text-base text-zinc-600">{item.description}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Risk Disclosure */}
+      <section className="bg-zinc-900 text-white">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.4 }}
+            className="flex items-start gap-4 max-w-4xl mx-auto"
+          >
+            <div className="flex-shrink-0 mt-1">
+              <AlertTriangle className="h-5 w-5 text-zinc-400" />
+            </div>
+            <div className="flex-1">
+              <h3 className="text-sm font-semibold text-white mb-2">Risk Disclosure</h3>
+              <p className="text-sm text-zinc-400 leading-relaxed">
+                Partner income is variable and performance dependent. Crypto and FX markets involve financial risk.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Partner Code of Conduct */}
+      <section className="bg-zinc-950 text-white border-t border-zinc-800">
+        <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:py-32">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.5 }}
+            className="mx-auto max-w-2xl text-center mb-16"
+          >
+            <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+              Partner Code of Conduct
+            </h2>
+            <p className="mt-4 text-lg text-zinc-400">
+              Standards and guidelines for ethical partner practices.
+            </p>
+          </motion.div>
+          <div className="grid gap-6 sm:grid-cols-3">
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.45, delay: 0.1 }}
+            >
+              <Card className="h-full border border-zinc-800 bg-zinc-900">
+                <CardContent className="p-6">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 border border-zinc-700 mb-4">
+                    <Ban className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">No misleading advertising</h3>
+                  <p className="text-sm text-zinc-400 leading-relaxed">
+                    All promotional materials must accurately represent products and services without deceptive claims.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.45, delay: 0.2 }}
+            >
+              <Card className="h-full border border-zinc-800 bg-zinc-900">
+                <CardContent className="p-6">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 border border-zinc-700 mb-4">
+                    <XCircle className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">No false profit claims</h3>
+                  <p className="text-sm text-zinc-400 leading-relaxed">
+                    Partners must not make unsubstantiated claims about potential earnings or guaranteed returns.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.45, delay: 0.3 }}
+            >
+              <Card className="h-full border border-zinc-800 bg-zinc-900">
+                <CardContent className="p-6">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 border border-zinc-700 mb-4">
+                    <Shield className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">No unauthorized traffic sources</h3>
+                  <p className="text-sm text-zinc-400 leading-relaxed">
+                    Traffic must originate from approved sources and comply with exchange partner policies.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
           </div>
         </div>
       </section>

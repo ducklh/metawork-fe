@@ -22,6 +22,11 @@ import {
   Eye,
   Zap,
   Handshake,
+  FileText,
+  Calendar,
+  MapPin as MapPinIcon,
+  Code,
+  Network,
 } from "lucide-react";
 
 const ecosystemItems = [
@@ -648,6 +653,202 @@ export default function AboutUs() {
                 </CardContent>
               </Card>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Legal Company Information */}
+      <section className="bg-zinc-900 text-white">
+        <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:py-32">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.5 }}
+            className="mx-auto max-w-2xl text-center mb-16"
+          >
+            <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+              Legal Company Information
+            </h2>
+            <p className="mt-4 text-lg text-zinc-400">
+              Official corporate registration and legal entity details.
+            </p>
+          </motion.div>
+          <div className="grid gap-6 sm:grid-cols-3">
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.45, delay: 0.1 }}
+            >
+              <Card className="h-full border border-zinc-800 bg-zinc-950">
+                <CardContent className="p-6">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 border border-zinc-700 mb-4">
+                    <FileText className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-sm font-medium text-zinc-400 mb-2">Legal Entity Name</h3>
+                  <p className="text-base font-semibold text-white">K-Network</p>
+                </CardContent>
+              </Card>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.45, delay: 0.2 }}
+            >
+              <Card className="h-full border border-zinc-800 bg-zinc-950">
+                <CardContent className="p-6">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 border border-zinc-700 mb-4">
+                    <FileCheck className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-sm font-medium text-zinc-400 mb-2">Business Registration Number</h3>
+                  <p className="text-base font-semibold text-white">Available upon request</p>
+                </CardContent>
+              </Card>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.45, delay: 0.3 }}
+            >
+              <Card className="h-full border border-zinc-800 bg-zinc-950">
+                <CardContent className="p-6">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 border border-zinc-700 mb-4">
+                    <MapPinIcon className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-sm font-medium text-zinc-400 mb-2">Jurisdiction of Registration</h3>
+                  <p className="text-base font-semibold text-white">Hong Kong</p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Company Timeline */}
+      <section className="bg-zinc-950 text-white">
+        <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:py-32">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.5 }}
+            className="mx-auto max-w-2xl text-center mb-16"
+          >
+            <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+              Company Timeline
+            </h2>
+            <p className="mt-4 text-lg text-zinc-400">
+              Key milestones in our growth and development.
+            </p>
+          </motion.div>
+          <div className="relative">
+            {/* Timeline line */}
+            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-zinc-800 transform -translate-x-1/2 hidden lg:block" />
+
+            <div className="space-y-12 lg:space-y-16">
+              {/* Company Founded */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.4 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="relative flex flex-col lg:flex-row lg:items-center gap-6"
+              >
+                <div className="lg:w-1/2 lg:pr-12 lg:text-right">
+                  <Card className="border border-zinc-800 bg-zinc-900">
+                    <CardContent className="p-6">
+                      <div className="flex items-center gap-4 lg:justify-end mb-3">
+                        <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-zinc-800 border border-zinc-700">
+                          <Calendar className="h-5 w-5 text-white" />
+                        </div>
+                        <h3 className="text-lg font-semibold text-white">Company Founded</h3>
+                      </div>
+                      <p className="text-sm text-zinc-400">2021</p>
+                    </CardContent>
+                  </Card>
+                </div>
+                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-zinc-800 border-2 border-white rounded-full z-10" />
+                <div className="lg:w-1/2 lg:pl-12" />
+              </motion.div>
+
+              {/* Infrastructure Platform Launch */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.4 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="relative flex flex-col lg:flex-row lg:items-center gap-6"
+              >
+                <div className="lg:w-1/2 lg:pr-12" />
+                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-zinc-800 border-2 border-white rounded-full z-10" />
+                <div className="lg:w-1/2 lg:pl-12 lg:text-left">
+                  <Card className="border border-zinc-800 bg-zinc-900">
+                    <CardContent className="p-6">
+                      <div className="flex items-center gap-4 mb-3">
+                        <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-zinc-800 border border-zinc-700">
+                          <Rocket className="h-5 w-5 text-white" />
+                        </div>
+                        <h3 className="text-lg font-semibold text-white">Infrastructure Platform Launch</h3>
+                      </div>
+                      <p className="text-sm text-zinc-400">2022</p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </motion.div>
+
+              {/* API Framework Release */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.4 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="relative flex flex-col lg:flex-row lg:items-center gap-6"
+              >
+                <div className="lg:w-1/2 lg:pr-12 lg:text-right">
+                  <Card className="border border-zinc-800 bg-zinc-900">
+                    <CardContent className="p-6">
+                      <div className="flex items-center gap-4 lg:justify-end mb-3">
+                        <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-zinc-800 border border-zinc-700">
+                          <Code className="h-5 w-5 text-white" />
+                        </div>
+                        <h3 className="text-lg font-semibold text-white">API Framework Release</h3>
+                      </div>
+                      <p className="text-sm text-zinc-400">2023</p>
+                    </CardContent>
+                  </Card>
+                </div>
+                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-zinc-800 border-2 border-white rounded-full z-10" />
+                <div className="lg:w-1/2 lg:pl-12" />
+              </motion.div>
+
+              {/* Global Institutional Expansion */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.4 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="relative flex flex-col lg:flex-row lg:items-center gap-6"
+              >
+                <div className="lg:w-1/2 lg:pr-12" />
+                <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-zinc-800 border-2 border-white rounded-full z-10" />
+                <div className="lg:w-1/2 lg:pl-12 lg:text-left">
+                  <Card className="border border-zinc-800 bg-zinc-900">
+                    <CardContent className="p-6">
+                      <div className="flex items-center gap-4 mb-3">
+                        <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-zinc-800 border border-zinc-700">
+                          <Network className="h-5 w-5 text-white" />
+                        </div>
+                        <h3 className="text-lg font-semibold text-white">Global Institutional Expansion</h3>
+                      </div>
+                      <p className="text-sm text-zinc-400">2024</p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>

@@ -28,6 +28,10 @@ import {
   Mail,
   Clock,
   FileText,
+  Tag,
+  Lock,
+  Key,
+  Eye,
 } from "lucide-react";
 
 export default function DocsPage() {
@@ -260,7 +264,7 @@ export default function DocsPage() {
       </section>
 
       {/* Affiliate Features */}
-      <section>
+        <section>
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -358,7 +362,7 @@ export default function DocsPage() {
                       <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-600" />
                       <span className="text-sm text-zinc-700">Realtime reporting dashboard</span>
                     </li>
-                  </ul>
+          </ul>
                 </CardContent>
               </Card>
             </motion.div>
@@ -426,10 +430,10 @@ export default function DocsPage() {
             </Card>
           </motion.div>
         </div>
-      </section>
+        </section>
 
       {/* Integration & Tracking */}
-      <section>
+        <section>
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -546,6 +550,209 @@ export default function DocsPage() {
                     </button>
                   </div>
                   <p className="mt-3 text-xs text-zinc-600 italic">(Dev chỉ cần paste code này)</p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* API Versioning */}
+      <section className="bg-zinc-900 text-white">
+        <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:py-32">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.5 }}
+            className="mb-12"
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800 border border-zinc-700">
+                <Tag className="h-6 w-6 text-white" />
+              </div>
+              <div>
+                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">API Versioning</h2>
+              </div>
+            </div>
+          </motion.div>
+
+          <div className="grid gap-6 sm:grid-cols-3 max-w-5xl">
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.45, delay: 0.1 }}
+            >
+              <Card className="h-full border border-zinc-800 bg-zinc-950">
+                <CardContent className="p-6">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 border border-zinc-700 mb-4">
+                    <Code className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Current version</h3>
+                  <p className="text-2xl font-bold text-white mb-1">v1.0</p>
+                  <p className="text-sm text-zinc-400">Active API version</p>
+                </CardContent>
+              </Card>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.45, delay: 0.2 }}
+            >
+              <Card className="h-full border border-zinc-800 bg-zinc-950">
+                <CardContent className="p-6">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 border border-zinc-700 mb-4">
+                    <CheckCircle2 className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Stability status</h3>
+                  <p className="text-base font-semibold text-white mb-1">Stable</p>
+                  <p className="text-sm text-zinc-400">Production-ready API</p>
+                </CardContent>
+              </Card>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.45, delay: 0.3 }}
+            >
+              <Card className="h-full border border-zinc-800 bg-zinc-950">
+                <CardContent className="p-6">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 border border-zinc-700 mb-4">
+                    <Clock className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Deprecation policy</h3>
+                  <p className="text-base font-semibold text-white mb-1">6 months notice</p>
+                  <p className="text-sm text-zinc-400">Advance notification for changes</p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Security Best Practices */}
+      <section className="bg-zinc-950 text-white border-t border-zinc-800">
+        <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:py-32">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.5 }}
+            className="mb-12"
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800 border border-zinc-700">
+                <Shield className="h-6 w-6 text-white" />
+              </div>
+              <div>
+                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Security Best Practices</h2>
+                <p className="mt-1 text-sm text-zinc-400">Guidelines for secure API integrations</p>
+              </div>
+            </div>
+          </motion.div>
+
+          <div className="max-w-5xl space-y-6">
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.45 }}
+            >
+              <Card className="border border-zinc-800 bg-zinc-900">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 border border-zinc-700 shrink-0">
+                      <Lock className="h-6 w-6 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold text-white mb-2">API Key Management</h3>
+                      <ul className="space-y-2 mt-3">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-400" />
+                          <span className="text-sm text-zinc-400">Store API keys securely using environment variables</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-400" />
+                          <span className="text-sm text-zinc-400">Never commit API keys to version control</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-400" />
+                          <span className="text-sm text-zinc-400">Rotate keys regularly and revoke unused credentials</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.45, delay: 0.1 }}
+            >
+              <Card className="border border-zinc-800 bg-zinc-900">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 border border-zinc-700 shrink-0">
+                      <Key className="h-6 w-6 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold text-white mb-2">Request Authentication</h3>
+                      <ul className="space-y-2 mt-3">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-400" />
+                          <span className="text-sm text-zinc-400">Always use HTTPS for all API requests</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-400" />
+                          <span className="text-sm text-zinc-400">Implement request signing for sensitive operations</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-400" />
+                          <span className="text-sm text-zinc-400">Validate server certificates to prevent MITM attacks</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.45, delay: 0.2 }}
+            >
+              <Card className="border border-zinc-800 bg-zinc-900">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 border border-zinc-700 shrink-0">
+                      <Eye className="h-6 w-6 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold text-white mb-2">Data Handling</h3>
+                      <ul className="space-y-2 mt-3">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-400" />
+                          <span className="text-sm text-zinc-400">Sanitize and validate all input parameters</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-400" />
+                          <span className="text-sm text-zinc-400">Log API interactions securely without exposing sensitive data</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-400" />
+                          <span className="text-sm text-zinc-400">Implement rate limiting to prevent abuse</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>
@@ -671,10 +878,10 @@ export default function DocsPage() {
             </Card>
           </motion.div>
         </div>
-      </section>
+        </section>
 
       {/* Roadmap */}
-      <section>
+        <section>
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -885,7 +1092,7 @@ export default function DocsPage() {
             </motion.div>
           </div>
         </div>
-      </section>
+        </section>
 
       {/* Legal & Disclaimer */}
       <section>
@@ -927,7 +1134,7 @@ export default function DocsPage() {
               </CardContent>
             </Card>
           </motion.div>
-        </div>
+      </div>
       </section>
     </div>
   );
