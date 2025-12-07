@@ -117,30 +117,30 @@ export default function IndividualPartnersSolutions() {
           <div className="absolute top-0 right-0 w-96 h-96 bg-zinc-50 rounded-full blur-3xl opacity-50" />
         </div>
         <div className="relative">
-        <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:py-32">
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.5 }}
-            className="mx-auto max-w-4xl text-center"
-          >
-            <h1 className="text-4xl font-semibold tracking-tight text-zinc-900 sm:text-5xl lg:text-6xl">
-              Solutions for Individual Partners
-            </h1>
-            <p className="mx-auto mt-6 max-w-3xl text-lg text-zinc-600 sm:text-xl leading-relaxed">
-              Access higher commission tiers, referral tools, and exclusive exchange offers through K-Network.
-            </p>
-            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button asChild size="lg" className="bg-[#DC2626] text-white hover:bg-[#B91C1C] transition-colors shadow-md hover:shadow-lg px-8">
-                <Link href="/auth/register-affiliate">Join as Partner</Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="px-8">
-                <Link href="/marketplace">View Marketplace</Link>
-              </Button>
-            </div>
-          </motion.div>
-        </div>
+          <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:py-32">
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.5 }}
+              className="mx-auto max-w-4xl text-center"
+            >
+              <h1 className="text-4xl font-semibold tracking-tight text-zinc-900 sm:text-5xl lg:text-6xl">
+                Solutions for Individual Partners
+              </h1>
+              <p className="mx-auto mt-6 max-w-3xl text-lg text-zinc-600 sm:text-xl leading-relaxed">
+                Access higher commission tiers, referral tools, and exclusive exchange offers through K-Network.
+              </p>
+              <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+                <Button asChild size="lg" className="bg-[#DC2626] text-white hover:bg-[#B91C1C] transition-colors shadow-md hover:shadow-lg px-8">
+                  <Link href="/auth/register-affiliate">Join as Partner</Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="px-8">
+                  <Link href="/marketplace">View Marketplace</Link>
+                </Button>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
