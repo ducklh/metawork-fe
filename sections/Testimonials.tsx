@@ -5,19 +5,19 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "K-Network's infrastructure has been instrumental in scaling our trading operations. The smart routing engine consistently delivers optimal execution across all our asset classes.",
+    quote: "We've been using K-Network for routing orders to multiple liquidity providers. The system handles our volume well and the API integration was straightforward.",
     author: "Sarah Chen",
     role: "CTO",
     company: "Global Exchange Platform",
   },
   {
-    quote: "The multi-asset liquidity access and institutional-grade security give us the confidence to handle enterprise-level trading volumes. Uptime has been exceptional.",
+    quote: "The liquidity access and security controls meet our requirements. We process significant volume daily and the uptime has been reliable.",
     author: "Michael Rodriguez",
     role: "Head of Trading",
     company: "International Brokerage",
   },
   {
-    quote: "Integration was seamless, and the API documentation is comprehensive. K-Network's team provided excellent support throughout our implementation process.",
+    quote: "Integration took about two weeks. The documentation covered what we needed and the support team helped with a few edge cases during setup.",
     author: "David Kim",
     role: "Engineering Lead",
     company: "Fintech Startup",
@@ -36,10 +36,10 @@ export function Testimonials() {
           className="mx-auto max-w-2xl text-center mb-16"
         >
           <h2 className="text-3xl font-semibold tracking-tight text-zinc-900 sm:text-4xl">
-            Trusted by Industry Leaders
+            What Partners Say
           </h2>
           <p className="mt-4 text-lg text-zinc-600">
-            See what our partners say about working with K-Network.
+            Feedback from exchanges and brokers using our infrastructure.
           </p>
         </motion.div>
 

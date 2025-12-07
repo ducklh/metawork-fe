@@ -24,22 +24,22 @@ export function Partners() {
         <div className="mt-6 grid grid-cols-2 items-center gap-6 sm:grid-cols-4 lg:grid-cols-8">
           {partnerLogos.map(({ src, name }, i) => (
             <motion.div
-              key={src}
+              key={`${name}-${i}`}
               initial={{ opacity: 0, y: 6 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.35, delay: i * 0.04 }}
               className="flex flex-col items-center justify-center"
             >
-              <div className="relative h-8 w-24 transition hover:opacity-100 hover:grayscale-0 opacity-60 hover:opacity-100">
-                <Image src={src} alt={name} fill className="object-contain grayscale hover:grayscale-0 transition-all" />
+              <div className="relative h-8 w-24 transition hover:opacity-100 hover:grayscale-0 hover:opacity-100">
+                <Image src={src} alt={name} fill className="object-contain hover:grayscale-0 transition-all" />
               </div>
               <p className="mt-2 text-xs font-medium text-zinc-600">{name}</p>
             </motion.div>
           ))}
         </div>
       </div>
-    </section >
+    </section>
   );
 }
 

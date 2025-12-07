@@ -15,8 +15,8 @@ export function FinalCTA() {
           transition={{ duration: 0.5 }}
           className="rounded-2xl border bg-gradient-to-br from-[#DC2626] to-black px-8 py-14 text-center text-white shadow-xl"
         >
-          <h3 className="text-2xl font-bold sm:text-3xl">Ready to scale your brand or upgrade your commissions?</h3>
-          <p className="mt-4 text-lg text-white/90">Partner with K-NETWORK today.</p>
+          <h3 className="text-2xl font-semibold sm:text-3xl">Get started with K-Network</h3>
+          <p className="mt-4 text-lg text-white/90">Connect with our team to discuss your requirements.</p>
           <div className="mt-8 flex items-center justify-center">
             <Button asChild size="lg" className="bg-white text-[#DC2626] hover:bg-zinc-100 transition-colors shadow-lg hover:shadow-xl px-8">
               <Link href="/partner-with-us">Partner With Us</Link>

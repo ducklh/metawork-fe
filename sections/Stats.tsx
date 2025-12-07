@@ -5,23 +5,23 @@ import { motion } from "framer-motion";
 const stats = [
   {
     value: "20+",
-    label: "Liquidity Providers Connected",
-    description: "Access to top-tier liquidity sources worldwide",
+    label: "Liquidity Providers",
+    description: "Connected to major liquidity sources across crypto and forex markets",
   },
   {
     value: "15M+",
-    label: "Monthly Trading Volume",
-    description: "Processed across multiple asset classes",
+    label: "Monthly Volume",
+    description: "Trading volume processed monthly across all connected partners",
   },
   {
     value: "35+",
     label: "Enterprise Partners",
-    description: "Trusted by leading financial institutions",
+    description: "Exchanges, brokers, and trading platforms using our infrastructure",
   },
   {
     value: "99.99%",
-    label: "System Uptime",
-    description: "Enterprise-grade reliability and availability",
+    label: "Uptime",
+    description: "System availability maintained across all services",
   },
 ];
 

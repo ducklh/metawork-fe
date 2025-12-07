@@ -33,7 +33,8 @@ const architectureSteps = [
 export function ArchitectureOverview() {
   return (
     <section className="bg-zinc-50">
-      <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:py-32">
+      <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:py-28">
+        {/* Title */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -49,58 +50,49 @@ export function ArchitectureOverview() {
           </p>
         </motion.div>
 
-        <div className="relative">
-          {/* Flow diagram */}
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {architectureSteps.map((step, i) => (
-              <motion.div
-                key={step.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="relative"
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="inline-flex h-16 w-16 items-center justify-center rounded-xl bg-white border-2 border-zinc-200 shadow-sm">
-                    <step.icon className={`h-8 w-8 ${step.color}`} />
-                  </div>
-                  <h3 className="mt-4 text-lg font-semibold text-zinc-900">
-                    {step.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-zinc-600">
-                    {step.description}
-                  </p>
+        {/* Diagram */}
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+          {architectureSteps.map((step, i) => (
+            <motion.div
+              key={step.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="relative flex justify-center"
+            >
+              {/* Icon box */}
+              <div className="flex flex-col items-center text-center">
+                <div className="inline-flex h-16 w-16 items-center justify-center rounded-xl bg-white border-2 border-zinc-200 shadow-sm">
+                  <step.icon className={`h-8 w-8 ${step.color}`} />
                 </div>
 
-                {/* Arrow connector */}
-                {i < architectureSteps.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 left-full w-full h-0.5">
-                    <div className="relative h-full">
-                      <div className="absolute inset-0 bg-zinc-200" />
-                      <div className="absolute right-0 top-1/2 -translate-y-1/2">
-                        <ArrowRight className="h-4 w-4 text-zinc-400" />
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </motion.div>
-            ))}
-          </div>
+                <h3 className="mt-4 text-lg font-semibold text-zinc-900">
+                  {step.title}
+                </h3>
+                <p className="mt-2 text-sm text-zinc-600 max-w-[220px]">
+                  {step.description}
+                </p>
+              </div>
 
-          {/* Connection lines for mobile/tablet */}
-          <div className="lg:hidden mt-8 flex justify-center">
-            <div className="flex flex-col gap-4">
-              {architectureSteps.slice(0, -1).map((_, i) => (
-                <div key={i} className="flex items-center justify-center">
-                  <ArrowRight className="h-6 w-6 text-zinc-300 rotate-90" />
+              {/* Arrow - chỉ hiện trên màn hình lớn */}
+              {i < architectureSteps.length - 1 && (
+                <div
+                  className="
+                    hidden lg:block absolute 
+                    top-[32px] right-0 translate-x-1/2 
+                    w-16 h-px
+                  "
+                >
+                  <div className="relative h-full bg-zinc-200">
+                    <ArrowRight className="absolute right-0 top-1/2 -translate-y-1/2 h-4 w-4 text-zinc-400" />
+                  </div>
                 </div>
-              ))}
-            </div>
-          </div>
+              )}
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
   );
 }
-
