@@ -10,8 +10,8 @@ const partnerLogos = [
   { src: "/partner/mexc.png", name: "MEXC" },
   { src: "/partner/Lbank.png", name: "LBank" },
   { src: "/partner/google.png", name: "PrimeXBT" },
-  { src: "/partner/google.png", name: "Gate" },
-  { src: "/partner/google.png", name: "BloFin" },
+  { src: "/partner/gate.jpg", name: "Gate" },
+  { src: "/partner/blofin.png", name: "BloFin" },
 ];
 
 export function Partners() {

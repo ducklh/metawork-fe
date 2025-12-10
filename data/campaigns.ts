@@ -65,7 +65,7 @@ export const campaigns: Campaign[] = [
     name: "Gate.io Partner Program",
     description: "Earn up to 40% commission on every trade with Gate.io affiliate links.",
     category: "Crypto",
-    logo: "/market/gate.svg",
+    logo: "/market/gate.jpg",
     payoutType: "RevShare",
     commissionRate: "Up to 40% trading fees",
     affiliateLink: "https://www.gate.io/affiliate",
