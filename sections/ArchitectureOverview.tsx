@@ -77,13 +77,7 @@ export function ArchitectureOverview() {
 
               {/* Arrow - chỉ hiện trên màn hình lớn */}
               {i < architectureSteps.length - 1 && (
-                <div
-                  className="
-                    hidden lg:block absolute 
-                    top-[32px] right-0 translate-x-1/2 
-                    w-16 h-px
-                  "
-                >
+                <div className="hidden lg:block absolute top-[32px] right-0 translate-x-1/2 w-16 h-px">
                   <div className="relative h-full bg-zinc-200">
                     <ArrowRight className="absolute right-0 top-1/2 -translate-y-1/2 h-4 w-4 text-zinc-400" />
                   </div>
