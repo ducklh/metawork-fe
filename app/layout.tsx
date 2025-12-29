@@ -12,6 +12,12 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "K Network — Affiliate Marketing Platform",
   description: "The leading affiliate marketing platform for affiliates and advertisers.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.png",
+  },
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
