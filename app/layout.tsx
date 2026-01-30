@@ -12,6 +12,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "K Network — Affiliate Marketing Platform",
   description: "The leading affiliate marketing platform for affiliates and advertisers.",
+  verification: {
+    google: "V6UDXcyxcMsouhk3ioy3tAoZ46sWfJeM7pUms6LriW0",
+  },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
